@@ -1,0 +1,112 @@
+:root {
+    --red: #E50914;
+    --black: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Base Elements*/
+body {
+    background-color: var(--black);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    color: var(--red);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-weight: bolder;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+/*Main Movie*/
+.main-movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 16px;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), no-repeat center/100% url('../img/SpiderManNoWayHome.jpg');
+    background-size: cover;
+}
+.main-movie .synopsis {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.main-movie h3 {
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.button {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+.button i {
+    margin-right: 8px;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+.container {
+    margin-left: 20px;
+}
+.main-movie .container {
+    width: 80%;
+}
+
+/*Carousel*/
+
+.movie-box {
+    height: 100%;
+    width: 100%;
+    display: block  ;
+}
+.movie-carousel {
+    padding-top: 1vh;
+}
+
+/*Responsive*/
+
+@media screen and (max-width:526px) {
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .synopsis{
+        width: 70%;
+    }
+}
